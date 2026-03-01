@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public static int PlayerScore = 0; // Pontuação do player 
+    public static int PlayerScore = 0; // Pontuaï¿½ï¿½o do player 
     public int score = 0;
     public static GameManager Instance;
 
     public GUISkin layout;              // Fonte do placar
-    GameObject theBall;                 // Referência ao objeto bola
+    GameObject theBall;                 // Referï¿½ncia ao objeto bola
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        theBall = GameObject.FindGameObjectWithTag("Ball"); // Busca a referência da bola
+        theBall = GameObject.FindGameObjectWithTag("Ball"); // Busca a referï¿½ncia da bola
 
 
     }
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        // Garante que só exista um GameManager
+        // Garante que sï¿½ exista um GameManager
         if (Instance == null)
         {
             Instance = this;
@@ -43,7 +43,24 @@ public class GameManager : MonoBehaviour
         score += pontos;
         PlayerScore++;
     }
-    // incrementa a potuação
+
+    void ProximaFase()
+{
+    int indexAtual = SceneManager.GetActiveScene().buildIndex;
+
+    if (indexAtual + 1 < SceneManager.sceneCountInBuildSettings)
+    {
+        PlayerScore = 0;
+        SceneManager.LoadScene(indexAtual + 1);
+    }
+    else
+    {
+        PlayerScore = 0;
+        SceneManager.LoadScene(0);
+    }
+}
+
+    // incrementa a potuaï¿½ï¿½o
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.CompareTag("Brick"))
@@ -51,7 +68,7 @@ public class GameManager : MonoBehaviour
             PlayerScore++;
         }
     }
-    // Gerência da pontuação e fluxo do jogo
+    // Gerï¿½ncia da pontuaï¿½ï¿½o e fluxo do jogo
     void OnGUI()
     {
         GUI.skin = layout;
@@ -66,8 +83,9 @@ public class GameManager : MonoBehaviour
         }
         if (PlayerScore == 10)
         {
-            GUI.Label(new Rect(Screen.width / 2 - 150, 200, 2000, 1000), "PLAYER ONE WINS");
-            theBall.SendMessage("ResetBall", null, SendMessageOptions.RequireReceiver);
+            Invoke("ProximaFase", 2f);
+            // GUI.Label(new Rect(Screen.width / 2 - 150, 200, 2000, 1000), "PLAYER ONE WINS");
+            // theBall.SendMessage("ResetBall", null, SendMessageOptions.RequireReceiver);
         }
         
     }
