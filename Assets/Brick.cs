@@ -23,7 +23,7 @@ public class Brick : MonoBehaviour
 
             if (vida <= 0)
             {
-                GameManager.Instance.AddPoints(10);
+                GameManager.Instance.AddPoints(1);
                 Destroy(gameObject);
             }
         }
