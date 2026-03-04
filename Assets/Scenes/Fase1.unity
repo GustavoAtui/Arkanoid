@@ -270,6 +270,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &141120846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141120847}
+  - component: {fileID: 141120848}
+  m_Layer: 0
+  m_Name: ParedeDesce2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &141120847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141120846}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -5.98, y: 5.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430069996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+--- !u!61 &141120848
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141120846}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &232181568
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +616,7 @@ Transform:
   m_GameObject: {fileID: 366887537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -4.8, z: 0}
   m_LocalScale: {x: 13.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -574,7 +652,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -631,7 +709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40c052e1e48c2e49b3c09a5699e6bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  score: 0
   layout: {fileID: 11400000, guid: 51a04d49c77a9104687ae1477a8c22f4, type: 2}
 --- !u!4 &388761267
 Transform:
@@ -683,6 +760,8 @@ Transform:
   - {fileID: 560525106}
   - {fileID: 232181569}
   - {fileID: 1344051540}
+  - {fileID: 610080361}
+  - {fileID: 141120847}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
@@ -983,7 +1062,6 @@ GameObject:
   m_Component:
   - component: {fileID: 560525106}
   - component: {fileID: 560525108}
-  - component: {fileID: 560525107}
   m_Layer: 0
   m_Name: TopWall
   m_TagString: Untagged
@@ -1006,18 +1084,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430069996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &560525107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560525105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01710b0079bcfb45a890f583b07134e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SideWalls
 --- !u!61 &560525108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1025,6 +1091,84 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560525105}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &610080360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610080361}
+  - component: {fileID: 610080362}
+  m_Layer: 0
+  m_Name: ParedeDesce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610080361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610080360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 5.98, y: 5.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430069996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+--- !u!61 &610080362
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610080360}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -1159,7 +1303,6 @@ GameObject:
   - component: {fileID: 635253586}
   - component: {fileID: 635253590}
   - component: {fileID: 635253589}
-  - component: {fileID: 635253588}
   - component: {fileID: 635253587}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (10)
@@ -1196,18 +1339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &635253588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635253585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &635253589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1323,7 +1454,6 @@ GameObject:
   - component: {fileID: 691315045}
   - component: {fileID: 691315049}
   - component: {fileID: 691315048}
-  - component: {fileID: 691315047}
   - component: {fileID: 691315046}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (11)
@@ -1360,18 +1490,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &691315047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691315044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &691315048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1487,7 +1605,6 @@ GameObject:
   - component: {fileID: 744549685}
   - component: {fileID: 744549684}
   - component: {fileID: 744549686}
-  - component: {fileID: 744549687}
   - component: {fileID: 744549688}
   m_Layer: 0
   m_Name: element_purple_rectangle_0
@@ -1615,18 +1732,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.64, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &744549687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744549683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &744549688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,7 +1756,6 @@ GameObject:
   - component: {fileID: 746591963}
   - component: {fileID: 746591967}
   - component: {fileID: 746591966}
-  - component: {fileID: 746591965}
   - component: {fileID: 746591964}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (9)
@@ -1688,18 +1792,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &746591965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746591962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &746591966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2133,7 +2225,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1086344343}
   - component: {fileID: 1086344345}
-  - component: {fileID: 1086344344}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -2156,18 +2247,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430069996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1086344344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086344342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01710b0079bcfb45a890f583b07134e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1086344345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2225,7 +2304,6 @@ GameObject:
   - component: {fileID: 1199056688}
   - component: {fileID: 1199056692}
   - component: {fileID: 1199056691}
-  - component: {fileID: 1199056690}
   - component: {fileID: 1199056689}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (7)
@@ -2262,18 +2340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &1199056690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199056687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1199056691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2630,7 +2696,6 @@ GameObject:
   - component: {fileID: 1351757845}
   - component: {fileID: 1351757849}
   - component: {fileID: 1351757848}
-  - component: {fileID: 1351757847}
   - component: {fileID: 1351757846}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (1)
@@ -2667,18 +2732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &1351757847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351757844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1351757848
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2794,7 +2847,6 @@ GameObject:
   - component: {fileID: 1415750603}
   - component: {fileID: 1415750607}
   - component: {fileID: 1415750606}
-  - component: {fileID: 1415750605}
   - component: {fileID: 1415750604}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (3)
@@ -2831,18 +2883,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &1415750605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415750602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1415750606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2873,7 +2913,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2958,7 +2998,6 @@ GameObject:
   - component: {fileID: 1442929099}
   - component: {fileID: 1442929103}
   - component: {fileID: 1442929102}
-  - component: {fileID: 1442929101}
   - component: {fileID: 1442929100}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (6)
@@ -2995,18 +3034,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &1442929101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442929098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1442929102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3122,7 +3149,6 @@ GameObject:
   - component: {fileID: 1602775040}
   - component: {fileID: 1602775044}
   - component: {fileID: 1602775043}
-  - component: {fileID: 1602775042}
   - component: {fileID: 1602775041}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (4)
@@ -3159,18 +3185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &1602775042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602775039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1602775043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3488,7 +3502,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1755447702}
   - component: {fileID: 1755447704}
-  - component: {fileID: 1755447703}
   m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
@@ -3511,18 +3524,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430069996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1755447703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755447701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01710b0079bcfb45a890f583b07134e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SideWalls
 --- !u!61 &1755447704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3731,7 +3732,6 @@ GameObject:
   - component: {fileID: 1815627076}
   - component: {fileID: 1815627080}
   - component: {fileID: 1815627079}
-  - component: {fileID: 1815627078}
   - component: {fileID: 1815627077}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (8)
@@ -3750,7 +3750,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3, y: 2.2, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1704455187}
@@ -3768,18 +3768,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &1815627078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815627075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1815627079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3895,7 +3883,6 @@ GameObject:
   - component: {fileID: 1816157737}
   - component: {fileID: 1816157741}
   - component: {fileID: 1816157740}
-  - component: {fileID: 1816157739}
   - component: {fileID: 1816157738}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (2)
@@ -3932,18 +3919,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &1816157739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816157736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1816157740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4543,7 +4518,6 @@ GameObject:
   - component: {fileID: 2130316644}
   - component: {fileID: 2130316648}
   - component: {fileID: 2130316647}
-  - component: {fileID: 2130316646}
   - component: {fileID: 2130316645}
   m_Layer: 0
   m_Name: element_purple_rectangle_0 (5)
@@ -4580,18 +4554,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
   vida: 1
---- !u!114 &2130316646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130316643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a86d22e5b3858b4c92134daa7812d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &2130316647
 BoxCollider2D:
   m_ObjectHideFlags: 0

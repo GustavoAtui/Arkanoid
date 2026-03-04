@@ -46,7 +46,7 @@ public class BallControl : MonoBehaviour
         Mathf.Abs(rb2d.linearVelocity.y)
     ).normalized;
 
-    rb2d.linearVelocity = direction * speed;
+    rb2d.linearVelocity = direction *speed;
 }
 
     }

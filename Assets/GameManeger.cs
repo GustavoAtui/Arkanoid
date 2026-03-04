@@ -6,6 +6,16 @@ public class GameManager : MonoBehaviour
     public static int PlayerScore = 0;
     public static GameManager Instance;
 
+
+    public static void PlayerDied (string wallID) {
+    if (wallID == "BottomWall")
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        PlayerScore = 0;
+    } 
+}
+
+    
     public GUISkin layout;
     GameObject theBall;
 
@@ -22,6 +32,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    
 
     void Start()
     {

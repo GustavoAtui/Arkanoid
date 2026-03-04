@@ -1586,7 +1586,6 @@ GameObject:
   m_Component:
   - component: {fileID: 560525106}
   - component: {fileID: 560525108}
-  - component: {fileID: 560525107}
   m_Layer: 0
   m_Name: TopWall
   m_TagString: Untagged
@@ -1609,18 +1608,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430069996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &560525107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560525105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01710b0079bcfb45a890f583b07134e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SideWalls
 --- !u!61 &560525108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3301,7 +3288,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1086344343}
   - component: {fileID: 1086344345}
-  - component: {fileID: 1086344344}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -3324,18 +3310,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430069996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1086344344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086344342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01710b0079bcfb45a890f583b07134e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!61 &1086344345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4295,7 +4269,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1755447702}
   - component: {fileID: 1755447704}
-  - component: {fileID: 1755447703}
   m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
@@ -4318,18 +4291,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430069996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1755447703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755447701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01710b0079bcfb45a890f583b07134e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SideWalls
 --- !u!61 &1755447704
 BoxCollider2D:
   m_ObjectHideFlags: 0
