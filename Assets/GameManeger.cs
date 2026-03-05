@@ -7,13 +7,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
 
-    public static void PlayerDied (string wallID) {
-    if (wallID == "BottomWall")
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    public void PlayerDied(){
         PlayerScore = 0;
-    } 
-}
+        SceneManager.LoadScene("MenuInicial");
+    }
 
     
     public GUISkin layout;
@@ -58,7 +55,6 @@ public class GameManager : MonoBehaviour
     {
         int indexAtual = SceneManager.GetActiveScene().buildIndex;
 
-        PlayerScore = 0;
 
         if (indexAtual + 1 < SceneManager.sceneCountInBuildSettings)
         {
