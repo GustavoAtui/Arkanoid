@@ -1,12 +1,12 @@
-using TMPro;
 using UnityEngine;
+using TMPro;
 
-public class WinManager : MonoBehaviour
+public class VitoriaManager : MonoBehaviour
 {
-    public TextMeshProUGUI ScoreText;
+    public TextMeshProUGUI scoreText;
 
     void Start()
     {
-        ScoreText.text = "Score: " + GameManager.PlayerScore;
+        scoreText.text = "Score: " + GameManager.PlayerScore;
     }
 }
