@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
 
 
     public void PlayerDied(){
-        PlayerScore = 0;
-        SceneManager.LoadScene("MenuInicial");
+        SceneManager.LoadScene("Derrota");
     }
 
     
@@ -55,14 +54,13 @@ public class GameManager : MonoBehaviour
     {
         int indexAtual = SceneManager.GetActiveScene().buildIndex;
 
-
-        if (indexAtual + 1 < SceneManager.sceneCountInBuildSettings)
+        if (indexAtual == 1) // terminou Fase1
         {
-            SceneManager.LoadScene(indexAtual + 1);
+            SceneManager.LoadScene(2); // vai para Fase2
         }
-        else
+        else if (indexAtual == 2) // terminou Fase2
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Vitoria"); // vai para tela de vitória
         }
     }
 
